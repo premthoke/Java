@@ -1,0 +1,50 @@
+1- Java - Java is platform independent because Java code runs on the JVM, not directly on hardware. It is object-oriented, which helps in organizing large programs. java is case sensitive 
+
+2- structure of java program
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello Java");
+    }
+}
+
+3- variables & data types
+int a = 12;
+char name = 'A';
+String = "prem thoke";
+float per = 72.11f; 
+double per = 72.11;
+
+Variable name must start with letter
+= means assignment
+Java is case-sensitive
+
+4- printing 
+int a = 2;
+int b= 26;
+System.out.println(a+b);
+System.out.println("Sum=" + (a + b));
+
+5 - example
+int x=10;
+if(x>5){
+System.out.println("greater than 5");
+}
+
+6- Task1 - write a program that stores your name and age and display it
+String name = "prem";
+int age = 20;
+System.out.println("my name is"+name);
+System.out.println("my age is"+age);
+  
+  Task2 - wap that takes a two numbers and display its sum,difference,product
+int a=2;
+int b=3;
+System.out.println("sum = "+(a+b));
+System.out.println("difference = "+(a-b));
+System.out.println("product = "+(a*b));
+
+  Task3 - did not understand the task  Print:  5 + 3 = 8
+int a = 5;
+int b = 3;
+System.out.println(a + " + " + b + " = " + (a + b));
