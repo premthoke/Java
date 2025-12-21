@@ -1,0 +1,81 @@
+DAY-2 Input + if–else 
+
+javac = compiles java file (javac practice.java)
+java = run file (java practice)
+
+basic input template-
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int x = sc.nextInt();
+        System.out.println(x);
+    }
+}
+
+Different Input Types-
+int age = sc.nextInt();
+double marks = sc.nextDouble();
+String name = sc.next();
+
+⚠️ Important:
+- `next()` → reads **one word**
+- `nextLine()` → reads **full line**
+
+if–else 
+`int marks = 75;`
+`if (marks >= 90) {
+System.out.println("Grade A");
+} else if (marks >= 60) {
+System.out.println("Grade B");
+} else {
+System.out.println("Fail");
+}`
+
+Task1 - take input name, age print it as hello <name> you are <age> years old
+import java.util.*;
+public class practice1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter your name");
+        String name = sc.next();
+        System.out.println("enter your age");
+        int age = sc.nextInt();
+        System.out.println("hello "+name);
+        System.out.println("you are"+age +"years old");
+    }
+}
+
+  Task2 - take an integer input and check whether positive, negative, zero
+import java.util.*;
+public class practice1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter the number");
+        int a = sc.nextInt();
+      if(a>0){
+      System.out.println("number is positive");
+      }else if(a<0){
+        System.out.println("number is negative");
+      }else{
+         System.out.println("number is zero");
+      }
+    }
+}
+
+Task3 - Take marks as input check ≥90 = Excellent, ≥60 = Good, <60 = need improvement
+import java.util.*;
+public class practice1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter your marks");
+        int marks = sc.nextInt();
+      if(marks>=90){
+      System.out.println("Excellent");
+      }else if(marks>=60){
+        System.out.println("Good");
+      }else{
+         System.out.println("Need improvement");
+      }
+    }
+}
