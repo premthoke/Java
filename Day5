@@ -1,0 +1,109 @@
+DAY-5 
+METHODS
+## What is a Method?
+A **method** is a block of code that
+- Does **one specific task**
+- Can be **reused**
+- Makes code **clean and readable**
+
+method-
+  static void greet() {
+    System.out.println("hello");
+  }
+
+calling a method-
+ public static void main(String[] args) {
+    greet();
+  }
+
+Parameterized method - 
+import java.util.*;
+public class practice1 {
+  static void greet(String name) {
+    System.out.println("hello " + name);
+  }
+  public static void main(String[] args) {
+    greet("prem");
+  }
+}
+
+Method with Return Value-
+import java.util.*;
+public class practice1 {
+  static int add(int a, int b) {
+    return a + b;
+  }
+  public static void main(String[] args) {
+    int sum = add(5, 3);
+    System.out.println(sum);
+  }
+}
+
+## Important Rules (Must Remember)
+1. Method must be **outside `main()`**
+2. Method call happens **inside `main()`**
+3. Return type must match value returned
+4. One method → one responsibility
+
+Task1 -  create a method: static void printHello() and call it from main()
+
+import java.util.*;
+public class practice1 {
+    static void printhello() {
+        System.out.println("hello world");
+    }
+    public static void main(String args[]) {
+        printhello();
+    }
+}
+
+Task2 - Create a method: static void printSquare(int n) , Print square of `n`.
+
+import java.util.*;
+public class practice1 {
+    static void printsquare(int n) {
+        System.out.println(n * n);
+    }
+    public static void main(String args[]) {
+        printsquare(30);
+    }
+}
+
+Task3 - Create a method: static int findMax(int a, int b) , Return the larger number.
+
+import java.util.*;
+public class practice1 {
+    static int findmax(int a, int b) {
+        if (a > b) {
+            return a;
+        } else {
+            return b;
+        }
+    }
+    public static void main(String args[]) {
+        int max = findmax(44, 22);
+        System.out.println(max);
+    }
+}
+
+Task4 - Create a method : static boolean isPrime(int n) , Return `true` if prime, else `false`.
+not attended 
+
+import java.util.*;
+public class practice1 {
+    static boolean isPrime(int n) {
+        if (n <= 1) {
+            return false;
+        }
+        for (int i = 2; i <= n - 1; i++) {
+            if (n % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+    public static void main(String[] args) {
+        System.out.println(isPrime(7));
+        System.out.println(isPrime(10));
+    }
+}
