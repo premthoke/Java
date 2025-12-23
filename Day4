@@ -1,0 +1,144 @@
+DAY-4 
+PATTERNS 
+
+Pattern 1 - Square 
+   for (int i = 1; i <= 4; i++) {
+      for (int j = 1; j <= 4; j++) {
+        System.out.print("* ");
+      }
+      System.out.println();
+   }
+ output :
+
+ * * * *
+
+ * * * *
+
+ * * * *
+
+Logic :
+- Outer loop → **rows**
+- Inner loop → **columns**
+
+Pattern 2 - Increasing Triangle
+for (int i = 1; i <= 4; i++) {
+      for (int j = 1; j <= i; j++) {
+        System.out.print("* ");
+      }
+      System.out.println();
+    }
+output :
+ * 
+
+ * * 
+
+ * * *
+
+ * * * *
+Logic :
+- Rows = 4
+- Columns = row number (`j <= i`)
+
+Pattern 3 - Number Triangle
+ for (int i = 1; i <= 4; i++) {
+      for (int j = 1; j <= i; j++) {
+        System.out.print(j+" ");
+      }
+        System.out.println();
+    }
+output : 
+1
+1 2
+1 2 3
+1 2 3 4
+
+Pattern 4 - Same number triangle
+for (int i = 1; i <= 4; i++) {
+      for (int j = 1; j <= i; j++) {
+        System.out.print(i+"");
+      }
+        System.out.println();
+    }
+output :
+1
+2 2
+3 3 3
+4 4 4 4
+
+Task 1-   
+ * * * * *
+
+ * * * * *
+
+ * * * * *
+
+ * * * * *
+ for (int i = 1; i <= 4; i++) {
+      for (int j = 1; j <= 5; j++) {
+        System.out.print("* ");
+      }
+        System.out.println();
+    }
+
+Task 2-  
+ * 
+
+ * * 
+
+ * * * 
+
+ * * * *
+
+ * * * * *
+ for (int i = 1; i <= 5; i++) {
+      for (int j = 1; j <= i; j++) {
+        System.out.print("* ");
+      }
+        System.out.println();
+    }
+
+Task 3-
+1
+2 2
+3 3 3
+4 4 4 4
+  for (int i = 1; i <= 4; i++) {
+      for (int j = 1; j <= i; j++) {
+        System.out.print(i+" ");
+      }
+        System.out.println();
+    }
+
+Task 4-
+ * * * * *
+
+ * * * *
+
+ * * *
+
+ * *
+
+ *
+for (int i = 5; i >= 1; i--) {
+      for (int j = 1; j <= i; j++) {
+        System.out.print("* ");
+      }
+      System.out.println();
+    }
+
+- System.out.println()
+Prints and then moves to a new line
+Adds an automatic line break
+System.out.println("Hello");
+System.out.println("World");
+Hello
+World
+
+-System.out.print()
+Prints on the same line
+Does NOT move the cursor to next line
+System.out.println("Hello");
+System.out.println("World");
+HelloWorld
+
+
