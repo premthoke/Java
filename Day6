@@ -160,4 +160,53 @@ done but in separate separate programs for each
 
 Task3 - Reverse the array (print in reverse order).
 
+```java
+import java.util.*;
+public class practice1 {
+    public static void arrays() {
+        System.out.println("enter a size array ");
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int arr[] = new int[n];
+        System.out.println("enter a array elements");
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+        System.out.println("Reversed array:");
+        for (int i = n - 1; i >= 0; i--) {
+            System.out.println(arr[i]);
+        }
+    }
+    public static void main(String args[]) {
+        arrays();
+    }
+}
+```
+
 Task4 - Count how many elements are **even** in the array.
+
+```
+import java.util.*;
+public class practice1 {
+    public static void arrays() {
+        System.out.println("enter a size array ");
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int arr[] = new int[n];
+        int count = 0;
+        System.out.println("enter a array elements");
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+        for (int i = 0; i < n; i++) {
+            if (arr[i] % 2 == 0) {
+                count++;
+            }
+        }
+        System.out.println("count of even numbers = " + count);
+    }
+    public static void main(String args[]) {
+        arrays();
+    }
+}
+```
