@@ -1,5 +1,6 @@
 DAY-5 
 METHODS
+
 ## What is a Method?
 A **method** is a block of code that
 - Does **one specific task**
@@ -26,8 +27,11 @@ public class practice1 {
     greet("prem");
   }
 }
+```
 
 Method with Return Value-
+
+```java
 import java.util.*;
 public class practice1 {
   static int add(int a, int b) {
@@ -38,8 +42,10 @@ public class practice1 {
     System.out.println(sum);
   }
 }
+```
 
 ## Important Rules (Must Remember)
+
 1. Method must be **outside `main()`**
 2. Method call happens **inside `main()`**
 3. Return type must match value returned
@@ -47,6 +53,7 @@ public class practice1 {
 
 Task1 -  create a method: static void printHello() and call it from main()
 
+```
 import java.util.*;
 public class practice1 {
     static void printhello() {
@@ -56,9 +63,11 @@ public class practice1 {
         printhello();
     }
 }
+```
 
 Task2 - Create a method: static void printSquare(int n) , Print square of `n`.
 
+```
 import java.util.*;
 public class practice1 {
     static void printsquare(int n) {
@@ -68,9 +77,11 @@ public class practice1 {
         printsquare(30);
     }
 }
+```
 
 Task3 - Create a method: static int findMax(int a, int b) , Return the larger number.
 
+```
 import java.util.*;
 public class practice1 {
     static int findmax(int a, int b) {
@@ -85,10 +96,12 @@ public class practice1 {
         System.out.println(max);
     }
 }
+```
 
 Task4 - Create a method : static boolean isPrime(int n) , Return `true` if prime, else `false`.
 not attended 
 
+```java
 import java.util.*;
 public class practice1 {
     static boolean isPrime(int n) {
@@ -107,3 +120,50 @@ public class practice1 {
         System.out.println(isPrime(10));
     }
 }
+```
+
+Call method by creating a object of class -
+
+```java
+import java.util.*;
+public class practice1
+{
+    public void printMessage() {
+        System.out.println("Hello world");
+    }
+    public static void main(String[] args) {
+        practice1 obj = new practice1();
+        obj.printMessage(); 
+    }
+}
+```
+
+call a method within a method - 
+
+```java
+import java.util.*;
+public class practice1 {
+    public static void D() {
+        float d = 40.5f;
+        System.out.println("In Method D");
+    }
+    public static void C() {
+        double c = 30.5;
+        System.out.println("In Method C");
+    }
+    public static void B() {
+        int b = 20;
+        C(); // Calling C
+        System.out.println("In Method B");
+    }
+    public static void A() {
+        int a = 10;
+        B(); // Calling B
+        System.out.println("In Method A");
+    }
+    public static void main(String[] args) {
+        A(); // Start with function A
+        D(); // Then call D
+    }
+}
+```
