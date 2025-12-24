@@ -1,0 +1,163 @@
+DAY-6
+
+ARRAYS
+
+## What is an Array?
+
+An **array** is used to store:
+
+- Multiple values
+- Of the **same data type**
+- In **contiguous memory**
+
+```jsx
+   int[] arr = {10, 20, 30};
+```
+
+Array Declaration & Initialization :
+
+Method 1 (Size Known):
+
+    int arr[] = new int[10];
+
+Method 2 (Direct Values):
+
+   int arr[] = {1, 2, 3, 4, 5};
+Length of array:
+
+   arr.length
+
+Accessing a array elements :
+
+```
+import java.util.*;
+public class practice1 {
+    int arr[] = new int[10];
+    int arr2[] = { 2, 4, 31, 7 };
+    int a = arr2.length;
+    public static void main(String args[]) {
+        practice1 obj = new practice1();
+        System.out.println(obj.arr2[0]);
+        System.out.println(obj.arr[2]);
+        System.out.println(obj.a);
+    }
+}
+```
+
+Traversing an Array
+
+```java
+import java.util.*;
+public class practice1 {
+    public static void arrays() {
+        int arr2[] = { 2, 4, 31, 7 };
+        int a = arr2.length;
+        for (int i = 0; i < a; i++) {
+            System.out.println(arr2[i]);
+        }
+    }
+    public static void main(String args[]) {
+        arrays();
+    }
+}
+```
+
+**Taking Array Input and display it**
+
+```java
+import java.util.*;
+public class practice1 {
+    public static void arrays() {
+        System.out.println("enter a size array ");
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int arr[] = new int[n];
+        System.out.println("enter a array elements");
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+        for (int i = 0; i < n; i++) {
+            System.out.println(arr[i]);
+        }
+    }
+    public static void main(String args[]) {
+        arrays();
+    }
+}
+```
+
+Sum of array 
+
+```java
+for (int i = 0; i < arr.length; i++) {
+             sum += arr[i];
+        }
+```
+
+Max element in array 
+
+```java
+ import java.util.*;
+ public class practice1 {
+    public static void arrays() {
+        System.out.println("enter a size array ");
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int arr[] = new int[n];
+        int max = arr[0];
+        System.out.println("enter a array elements");
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+            }
+        }
+        System.out.println("max = " + max);
+    }
+    public static void main(String args[]) {
+        arrays();
+    }
+}
+```
+
+Min element in array
+
+```java
+import java.util.*;
+public class practice1 {
+    public static void arrays() {
+        System.out.println("enter a size array ");
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int arr[] = new int[n];
+        System.out.println("enter a array elements");
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+        int min = arr[0];
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] < min) {
+                min = arr[i];
+            }
+        }
+        System.out.println("min = " + min);
+    }
+    public static void main(String args[]) {
+        arrays();
+    }
+}
+```
+
+Task1 - Take input n size of array and display it 
+
+already done by me
+
+Task2 - Find and print: sum , min , max
+
+done but in separate separate programs for each
+
+Task3 - Reverse the array (print in reverse order).
+
+Task4 - Count how many elements are **even** in the array.
