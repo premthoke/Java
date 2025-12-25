@@ -1,0 +1,208 @@
+DAY-7
+
+STRINGS IN JAVA
+
+What is a String?
+
+In Java, a **String**:
+
+- Is a **sequence of characters**
+- Is an **object**, not a primitive
+- Is **immutable** (cannot be changed)
+
+Example :
+
+```java
+import java.util.*;
+public class practice1 {
+    public static void stringex() {
+        String name = "prem thoke";
+        System.out.println(name);
+    }
+    public static void main(String args[]) {
+        stringex();
+    }
+}
+```
+
+String vs char[]
+
+| String | char[] |
+| --- | --- |
+
+| Immutable | Mutable |
+| --- | --- |
+
+| Many built-in methods | No built-in methods |
+| --- | --- |
+
+| Easy to use | Low-level |
+| --- | --- |
+
+Taking String Input
+
+```java
+import java.util.*;
+public class practice1 {
+    public static void stringex() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter your name");
+        String name = sc.nextLine();
+        System.out.println("enter your age");
+        int age = sc.nextInt();
+        System.out.println("hello " + name);
+        System.out.println("your " + age + " now that's cool");
+    }
+    public static void main(String args[]) {
+        stringex();
+    }
+}
+```
+
+Important String Methods - 
+
+Length : s.length();
+Character at index : s.charAt(0);
+Substring : s.substring(1, 4);
+Equals : s1.equals(s2); // correct  , s1 == s2; // wrong for string
+
+To Upper / Lower  :  s.toUpperCase();  / s.toLowerCase();
+
+```java
+import java.util.*;
+public class practice1 {
+    public static void stringex() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter your name");
+        String name = sc.nextLine();
+        String surname = "thoke";
+        int len = name.length();
+        char a = name.charAt(3);
+        String subs = name.substring(1, 3);
+        boolean eql = name.equals(surname);
+        String upr = name.toUpperCase();
+        String lwr = name.toLowerCase();
+        System.out.println(len);
+        System.out.println(a);
+        System.out.println(subs);
+        System.out.println(upr);
+        System.out.println(lwr);
+        System.out.println(eql);
+    }
+    public static void main(String args[]) {
+        stringex();
+    }
+}
+```
+
+Traversing a String :
+
+```java
+for (int i = 0; i < s.length(); i++) {
+    System.out.print(s.charAt(i) + " ");
+}
+```
+
+String Immutability : This creates a **new String**, old one is untouched.
+
+```java
+String s = "hello";
+s = s + " world";
+```
+
+Task1 - Take a string input - print its length , print each char on a new line
+
+```java
+import java.util.*;
+public class practice1 {
+    public static void stringex() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter your name");
+        String name = sc.nextLine();
+        int len = name.length();
+        System.out.println(len);
+        for (int i = 0; i < len; i++) {
+            System.out.println(name.charAt(i));
+        }
+    }
+    public static void main(String args[]) {
+        stringex();
+    }
+}
+```
+
+Task2 - Count how many **vowels** are in the String.
+
+```
+import java.util.*;
+public class practice1 {
+    public static void stringex() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter your name");
+        String name = sc.nextLine();
+        int len = name.length();
+        char vowels[] = { 'a', 'e', 'o', 'i', 'u' };
+        int count = 0;
+        for (int i = 0; i < len; i++) {
+            char ch = name.charAt(i);
+            for (int j = 0; j < vowels.length; j++) {
+                if (ch == vowels[j]) {
+                    count++;
+                }
+            }
+        }
+        System.out.println(count);
+    }
+    public static void main(String args[]) {
+        stringex();
+    }
+}
+```
+
+Task3 - Reverse a string
+
+```java
+import java.util.*;
+public class practice1 {
+    public static void stringex() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter your name");
+        String name = sc.nextLine();
+        int len = name.length();
+        for (int i = len - 1; i >= 0; i--) {
+            char ch = name.charAt(i);
+            System.out.print(ch);
+        }
+    }
+    public static void main(String args[]) {
+        stringex();
+    }
+}
+```
+
+Task4 - Palindrome 
+
+```java
+import java.util.*;
+public class practice1 {
+    public static void stringex() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter your name");
+        String name = sc.nextLine();
+        int len = name.length();
+        String rev = "";
+        for (int i = len - 1; i >= 0; i--) {
+            rev = rev + name.charAt(i);
+        }
+        System.out.println(rev);
+        if (name.equals(rev)) {
+            System.out.println("palindrome");
+        } else {
+            System.out.println("not palindrome");
+        }
+    }
+    public static void main(String args[]) {
+        stringex();
+    }
+}
+```
